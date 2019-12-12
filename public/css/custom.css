@@ -1,0 +1,13 @@
+.form-control, .form-control:focus{
+    background-color: #00000080;
+    color:white
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: #000000bf;
+    color: white;
+}
