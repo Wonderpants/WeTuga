@@ -32,12 +32,18 @@
                     <ul class="navbar-nav mr-auto">
                         @guest
                         @else
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/home">Início <span class="sr-only">(current)</span></a>
+                            <li class="nav-item @if(isset($currentPage) and $currentPage === "home") active @endif">
+                                <a class="nav-link" href="/">Início</a>
                             </li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Filmes</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Séries</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Outros</a> </li>
+                            <li class="nav-item @if(isset($currentPage) and $currentPage === "filmes") active @endif">
+                                <a class="nav-link" href="/filmes">Filmes</a>
+                            </li>
+                            <li class="nav-item @if(isset($currentPage) and $currentPage === "series") active @endif">
+                                <a class="nav-link" href="/series">Séries</a>
+                            </li>
+                            <li class="nav-item @if(isset($currentPage) and $currentPage === "outros") active @endif">
+                                <a class="nav-link" href="/outros">Outros</a>
+                            </li>
                         @endguest
 
                     </ul>

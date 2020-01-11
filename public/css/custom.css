@@ -12,3 +12,100 @@
     color: white;
 }
 .cover{width:120px!important;height:164px!important;background-color: darkgrey}
+
+div#WTcontent {
+    padding-bottom: 30px;
+    overflow: hidden;
+    padding-top: 5px;
+    margin-top: -1px;
+}
+
+div#WTcontent div.WTcontent-box {
+    width: 980px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 10px -4px #000;
+    -webkit-box-shadow: 0 1px 10px -4px #000;
+    box-shadow: 0 1px 10px -4px #000;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+div#WTcontent div.WTcontent-box div.WTbox-header {
+    height: 48px;
+    width: 979px;
+    background: #fff;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-sizing: unset;
+}
+
+div#WTcontent div.WTcontent-box div.WTbox-header div.WTbox-caption {
+    float: left;
+    width: 190px;
+    height: 15px;
+    margin: 17px 18px 0 16px;
+    text-transform: uppercase;
+    font-family: 'AvenirLT Heavy Bold';
+    font-size: 14px;
+    color: #797777;
+    text-transform: uppercase;
+}
+
+div#WTcontent div.WTcontent-box  div.WTbox-content {
+    width: 970px;
+    overflow: hidden;
+}
+
+div#WTcontent div.WTcontent-box div.WTbox-media {
+    float: left;
+    width: 950px;
+    overflow: hidden;
+}
+
+div#WTcontent div.WTcontent-box div.WTbox-media div.WTlist-content {
+    overflow: hidden;
+    height: 460px;
+    width: 950px;
+    float: left;
+    position: relative;
+}
+
+div#WTcontent div.WTcontent-box div.WTbox-media div.WTmovies-list {
+    overflow: hidden;
+    height: 832px;
+    width: 950px;
+    position: absolute;
+}
+
+div#WTcontent div.WTcontent-box div.WTbox-media div.WTlist-aux {
+    position: absolute;
+}
+
+div#WTcontent div.WTcontent-box div.WTbox-media div.WTmovies-list div.WTitem {
+    float: left;
+    width: 136px;
+    height: 198px;
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+    border-bottom: 1px solid #a7a7a7;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 5px 10px -7px #000;
+    -webkit-box-shadow: 0 5px 10px -7px #000;
+    box-shadow: 0 5px 10px -7px #000;
+    padding: 3px;
+    margin-left: 18px;
+    margin-top: 20px;
+}
+
+
+.WTcenter {
+    margin: 0 auto;
+    width: 980px
+}
+

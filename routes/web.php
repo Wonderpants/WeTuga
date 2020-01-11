@@ -11,12 +11,45 @@
 |
 */
 
-Route::get('/', function () { return view('welcome'); });
+
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Auth::routes(['verify' => true]);
 
 Route::middleware(['verified'])->group(function () {
-    Route::get('home', function() { return view('home'); });
-    Route::get('profile', function() { return view('welcome'); });
-    Route::get('verify', function() { return view('auth.verify'); });
+    Route::get('filmes', function () {
+
+        return view('conteudo', [
+            'currentPage' => 'filmes',
+        ]);
+    });
+    Route::get('filmes/{id}', function($id=0) {
+        $users = DB::table('users')->get();
+        return view('conteudo',[
+            'currentPage' => 'filmes',
+            'id' => $id,
+            'users' => $users
+        ]);
+    });
+
+    Route::get('series', function () {
+        return view('conteudo', [
+            'currentPage' => 'series'
+        ]);
+    });
+
+    Route::get('outros', function () {
+        return view('conteudo', [
+            'currentPage' => 'outros'
+        ]);
+    });
+
+    Route::get('profile', function () {
+        return view('welcome');
+    });
+    Route::get('verify', function () {
+        return view('auth.verify');
+    });
 });
