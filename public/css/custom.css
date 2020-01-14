@@ -1,6 +1,11 @@
-.form-control, .form-control:focus{
+body::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+}
+
+.form-control, .form-control:focus {
     background-color: #00000080;
-    color:white
+    color: white
 }
 
 .form-group {
@@ -11,7 +16,12 @@
     background-color: #000000bf;
     color: white;
 }
-.cover{width:120px!important;height:164px!important;background-color: darkgrey}
+
+.cover {
+    width: 120px !important;
+    height: 164px !important;
+    background-color: darkgrey
+}
 
 div#WTcontent {
     padding-bottom: 30px;
@@ -55,7 +65,7 @@ div#WTcontent div.WTcontent-box div.WTbox-header div.WTbox-caption {
     text-transform: uppercase;
 }
 
-div#WTcontent div.WTcontent-box  div.WTbox-content {
+div#WTcontent div.WTcontent-box div.WTbox-content {
     width: 970px;
     overflow: hidden;
 }
@@ -102,7 +112,6 @@ div#WTcontent div.WTcontent-box div.WTbox-media div.WTmovies-list div.WTitem {
     margin-left: 18px;
     margin-top: 20px;
 }
-
 
 .WTcenter {
     margin: 0 auto;
