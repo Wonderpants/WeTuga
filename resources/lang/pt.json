@@ -9,5 +9,11 @@
     "Please click the button below to verify your email address.": "Clique no botão abaixo para verificar seu endereço de e-mail.",
     "If you did not create an account, no further action is required.": "Se você não criou uma conta, nenhuma ação adicional será necessária.",
 
-    "Hello!": "Olá!"
+    "Hello!": "Olá!",
+
+    "Verify Your Email Address": "Verifique o seu endereço de e-mail",
+    "A fresh verification link has been sent to your email address.": "Um novo link de verificação foi enviado para o seu endereço de e-mail.",
+    "Before proceeding, please check your email for a verification link.": "Antes de prosseguir, verifique o seu e-mail para um link de verificação.",
+    "If you did not receive the email": "Se você não recebeu o e-mail",
+    "click here to request another": "clique aqui para solicitar outro"
 }
