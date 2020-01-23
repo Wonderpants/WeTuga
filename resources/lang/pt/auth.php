@@ -17,5 +17,4 @@ return [
     'failed' => 'Essas credenciais não correspondem aos nossos registros.',
     'throttle' => 'Tentativas de login excedidas. Tente novamente em :seconds segundos.',
     "Reset Password Notification" => "Notificação da reposição de senha"
-
 ];

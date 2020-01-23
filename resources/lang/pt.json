@@ -1,4 +1,15 @@
 {
+    "Welcome": "Bem Vindo",
+    "E-Mail": "e-mail",
+    "Password": "Palavra chave",
+    "Remember me": "Lembre-se de mim",
+    "Login": "Iniciar Sessão",
+    "Forgot your password?": "Esqueceu a sua senha?",
+
+    "Register": "Registar",
+    "Name":  "Nome",
+    "Confirm Password": "Confirmar Palavra chave",
+
     "Reset Password Notification": "Notificação da reposição de senha",
     "You are receiving this email because we received a password reset request for your account.": "Você está a receber este e-mail porque recebemos uma solicitação de reposição de senha para sua conta.",
     "Reset Password": "Restaurar senha",

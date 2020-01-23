@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <h1 class="card-header text-center">{{ __('Registar') }}</h1>
+                    <h1 class="card-header text-center">{{ __('Welcome') }}</h1>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
@@ -15,10 +15,10 @@
                                 <label for="name" class="col-md-3 col-form-label text-md-right"></label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="{{ __('Nome') }}" required autocomplete="name" autofocus>
+                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="{{ __('Name') }}" required autocomplete="name" autofocus>
 
                                     @error('name')
-                                    <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span>
+                                    <span class="invalid-feedback" role="alert"> <strong>{{ __($message) }}</strong> </span>
                                     @enderror
                                 </div>
                             </div>
@@ -51,14 +51,14 @@
                                 <label for="password-confirm" class="col-md-3 col-form-label text-md-right"></label>
 
                                 <div class="col-md-6">
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="{{ __('Confirmar password') }}" required autocomplete="new-password">
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="{{ __('Confirm Password') }}" required autocomplete="new-password">
                                 </div>
                             </div>
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-3">
                                     <button type="submit" class="btn btn-primary">
-                                        {{ __('Registar') }}
+                                        {{ __('Register') }}
                                     </button>
                                 </div>
                             </div>

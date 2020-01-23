@@ -12,6 +12,10 @@
 */
 
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     $pages = array(
         "filmes" => DB::table('content')->where('type', 'movie')->orderby("date", "desc")->limit(6)->get(),
