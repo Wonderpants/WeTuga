@@ -33,16 +33,16 @@
                         @guest
                         @else
                             <li class="nav-item @if(isset($currentPage) and $currentPage === "home") active @endif">
-                                <a class="nav-link" href="/">Início</a>
+                                <a class="nav-link" href="{{route('home')}}">{{ucfirst(__('home'))}}</a>
                             </li>
                             <li class="nav-item @if(isset($currentPage) and $currentPage === "filmes") active @endif">
-                                <a class="nav-link" href="/filmes">Filmes</a>
+                                <a class="nav-link" href="{{route('movies')}}">{{ucfirst(__('movies'))}}</a>
                             </li>
                             <li class="nav-item @if(isset($currentPage) and $currentPage === "series") active @endif">
-                                <a class="nav-link" href="/series">Séries</a>
+                                <a class="nav-link" href="{{route('series')}}">{{ucfirst(__('series'))}}</a>
                             </li>
                             <li class="nav-item @if(isset($currentPage) and $currentPage === "outros") active @endif">
-                                <a class="nav-link" href="/outros">Outros</a>
+                                <a class="nav-link" href="{{route('others')}}">{{ucfirst(__('others'))}}</a>
                             </li>
                         @endguest
 
@@ -64,7 +64,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/perfil">Perfil</a>
+                                    <a class="dropdown-item" href="{{route('profile')}}">Perfil</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

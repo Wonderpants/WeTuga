@@ -1,30 +1,28 @@
 {
-    "Welcome": "Bem Vindo",
-    "E-Mail": "e-mail",
-    "Password": "Palavra chave",
-    "Remember me": "Lembre-se de mim",
-    "Login": "Iniciar Sessão",
-    "Forgot your password?": "Esqueceu a sua senha?",
-
-    "Register": "Registar",
-    "Name":  "Nome",
-    "Confirm Password": "Confirmar Palavra chave",
-
-    "Reset Password Notification": "Notificação da reposição de senha",
-    "You are receiving this email because we received a password reset request for your account.": "Você está a receber este e-mail porque recebemos uma solicitação de reposição de senha para sua conta.",
-    "Reset Password": "Restaurar senha",
-    "This password reset link will expire in :count minutes.": "Esse link de reposição de senha expirará em :count minutos.",
-    "If you did not request a password reset, no further action is required.": "Se você não solicitou uma resposição de senha, nenhuma ação adicional será necessária.",
-
-    "Verify Email Address": "Verificar endereço de email",
-    "Please click the button below to verify your email address.": "Clique no botão abaixo para verificar seu endereço de e-mail.",
-    "If you did not create an account, no further action is required.": "Se você não criou uma conta, nenhuma ação adicional será necessária.",
-
-    "Hello!": "Olá!",
-
-    "Verify Your Email Address": "Verifique o seu endereço de e-mail",
     "A fresh verification link has been sent to your email address.": "Um novo link de verificação foi enviado para o seu endereço de e-mail.",
     "Before proceeding, please check your email for a verification link.": "Antes de prosseguir, verifique o seu e-mail para um link de verificação.",
+    "click here to request another": "clique aqui para solicitar outro",
+    "Confirm Password": "Confirmar Palavra chave",
+    "E-Mail": "e-mail",
+    "Forgot your password?": "Esqueceu a sua senha?",
+    "Hello!": "Olá!",
+    "home": "início",
+    "If you did not create an account, no further action is required.": "Se você não criou uma conta, nenhuma ação adicional será necessária.",
     "If you did not receive the email": "Se você não recebeu o e-mail",
-    "click here to request another": "clique aqui para solicitar outro"
+    "If you did not request a password reset, no further action is required.": "Se você não solicitou uma resposição de senha, nenhuma ação adicional será necessária.",
+    "Login": "Iniciar Sessão",
+    "movies": "filmes",
+    "Name": "Nome",
+    "others": "outros",
+    "Password": "Palavra chave",
+    "Please click the button below to verify your email address.": "Clique no botão abaixo para verificar seu endereço de e-mail.",
+    "Register": "Registar",
+    "Remember me": "Lembre-se de mim",
+    "Reset Password": "Restaurar senha",
+    "Reset Password Notification": "Notificação da reposição de senha",
+    "This password reset link will expire in :count minutes.": "Esse link de reposição de senha expirará em :count minutos.",
+    "Verify Email Address": "Verificar endereço de email",
+    "Verify Your Email Address": "Verifique o seu endereço de e-mail",
+    "Welcome": "Bem Vindo",
+    "You are receiving this email because we received a password reset request for your account.": "Você está a receber este e-mail porque recebemos uma solicitação de reposição de senha para sua conta."
 }

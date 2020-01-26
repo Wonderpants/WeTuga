@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
 class UserController extends Controller
@@ -14,6 +15,12 @@ class UserController extends Controller
         $this->middleware('auth');
     }
 
+    public function error(string $message)
+    {
+        $user = Auth::user();
+        return view('users.profile', ['user' => $user, 'message' => $message]);
+    }
+
     public function edit(User $user)
     {
         $user = Auth::user();
@@ -22,41 +29,21 @@ class UserController extends Controller
 
     public function update(User $user)
     {
-        if (Auth::user()->email == request('email')) {
 
-            $this->validate(request(), [
-//                    'name' => 'required',
-//                    'email' => 'required|email|unique:users',
-                'password' => 'required|min:6|confirmed'
+        $this->validate(request(), [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|unique:users,email',
+            'password' => 'required|min:8|confirmed',
+        ]);
+        $user = Auth::user();
+        DB::table('users')
+            ->where('id', $user->id)
+            ->update([
+                'password' => bcrypt(request('password'))
             ]);
 
-//            $user->name = request('name');
-//            $user->email = request('email');
-            $user->password = bcrypt(request('password'));
+        return back();
 
-            $user->update();
-
-            return back();
-
-        } else {
-
-            try {
-                $this->validate(request(), [
-                    'name' => 'required',
-                    'email' => 'required|email|unique:users',
-                    'password' => 'required|min:6|confirmed'
-                ]);
-            } catch (ValidationException $e) {
-            }
-
-            $user->name = request('name');
-            $user->email = request('email');
-            $user->password = bcrypt(request('password'));
-
-            $user->update();
-
-            return back();
-
-        }
     }
 }
