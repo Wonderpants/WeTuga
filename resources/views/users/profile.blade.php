@@ -11,17 +11,17 @@
             </div>
 
             <div class="col-sm-6">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#settings">Settings</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" data-toggle="tab" href="#history">Viewing History</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" data-toggle="tab" href="#subscription">Subscription</a>
-                    </li>
-                </ul>
+                <div style="text-align: center;"><ul class="nav nav-tabs d-inline-flex">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#settings">Settings</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" data-toggle="tab" href="#history">Viewing History</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" data-toggle="tab" href="#subscription">Subscription</a>
+                        </li>
+                    </ul></div>
 
                 <div class="tab-content">
                     <div class="tab-pane active" id="settings">
@@ -34,7 +34,7 @@
                                     <div class="form-group">
                                         <div class="col-xs-6">
                                             <label for="first_name"><h4>First name</h4></label>
-                                            <input type="text" class="form-control" name="first_name" id="first_name" value="{{explode(" ", $user->name)[0]}}" title="enter your first name if any.">
+                                            <input type="text" class="form-control bg-transparent" name="first_name" id="first_name" value="{{explode(" ", $user->name)[0]}}" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -42,7 +42,7 @@
                                     <div class="form-group">
                                         <div class="col-xs-6">
                                             <label for="last_name"><h4>Last name</h4></label>
-                                            <input type="text" class="form-control" name="last_name" id="last_name" value="{{last(explode(" ", $user->name))}}" title="enter your last name if any.">
+                                            <input type="text" class="form-control bg-transparent" name="last_name" id="last_name" value="{{last(explode(" ", $user->name))}}" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@
                             <div class="form-group">
                                 <div class="col-xs-6">
                                     <label for="email"><h4>Email</h4></label>
-                                    <input type="email" class="form-control" name="email" id="email" value="{{$user->email}}" title="enter your email.">
+                                    <input type="email" class="form-control bg-transparent" name="email" id="email" value="{{$user->email}}" readonly>
                                 </div>
                             </div>
                             <div class="form-group">
