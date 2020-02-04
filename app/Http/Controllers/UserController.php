@@ -37,11 +37,8 @@ class UserController extends Controller
             'password' => 'required|min:8|confirmed',
         ]);
         $user = Auth::user();
-        DB::table('users')
-            ->where('id', $user->id)
-            ->update([
-                'password' => bcrypt(request('password'))
-            ]);
+        $user->password = bcrypt(request('password'));
+        $user->save();
 
         return back();
 

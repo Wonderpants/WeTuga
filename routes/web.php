@@ -15,6 +15,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 Route::get('/', function () {
     $pages = array(
@@ -92,7 +93,18 @@ Route::middleware(['verified'])->group(function () {
     Route::get('verify', function () {
         return view('auth.verify');
     });
-    Route::middleware('throttle:60,1')->group(function() {
-        Route::patch('profile/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);
+    Route::middleware('throttle:60,1')->group(function () {
+        Route::patch('profile/update', ['as' => 'users.update', 'uses' => 'UserController@update']);
     });
+
+    Route::middleware(['isAdmin'])->group(function() {
+        Route::name('admin.')->group(function () {
+
+            Route::get('dashboard', function () {
+                return view('home');
+            })->name('dashboard');
+
+        });
+    });
+
 });

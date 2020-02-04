@@ -18,8 +18,8 @@ class CreateContentTable extends Migration
             $table->string('name', 64);
             $table->date('date');
             $table->string('type', 32);
-            $table->integer('season');
-            $table->integer('episode');
+            $table->integer('season')->nullable();
+            $table->integer('episode')->nullable();
             $table->integer('minutes');
             $table->string('description', 512);
             $table->float('classification');

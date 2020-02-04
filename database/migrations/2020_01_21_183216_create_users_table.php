@@ -25,6 +25,8 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->boolean('subscription')->default(false);
             $table->string('package', 16)->default('Default');
+            $table->boolean('admin')->default(0);
+            $table->boolean('underage')->default(0);
 
             $table->foreign('package')->references('name')->on('packages');
         });
