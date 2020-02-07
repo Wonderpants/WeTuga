@@ -19,7 +19,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     </head>
-    <body class="h-100">
+    <body class="h-100" style="background-image: url('{{Storage::url('background.png')}}')">
         <div id="app" class="h-100">
             <nav class="navbar navbar-expand-lg navbar-light bg-light position-sticky fixed-top shadow">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -38,13 +38,13 @@
                             <li class="nav-item @if(isset($currentPage) and $currentPage === "home") active @endif">
                                 <a class="nav-link" href="{{route('home')}}">{{ucfirst(__('home'))}}</a>
                             </li>
-                            <li class="nav-item @if(isset($currentPage) and $currentPage === "filmes") active @endif">
+                            <li class="nav-item @if(isset($currentPage) and $currentPage === "movies") active @endif">
                                 <a class="nav-link" href="{{route('movies')}}">{{ucfirst(__('movies'))}}</a>
                             </li>
                             <li class="nav-item @if(isset($currentPage) and $currentPage === "series") active @endif">
                                 <a class="nav-link" href="{{route('series')}}">{{ucfirst(__('series'))}}</a>
                             </li>
-                            <li class="nav-item @if(isset($currentPage) and $currentPage === "outros") active @endif">
+                            <li class="nav-item @if(isset($currentPage) and $currentPage === "others") active @endif">
                                 <a class="nav-link" href="{{route('others')}}">{{ucfirst(__('others'))}}</a>
                             </li>
                         @endguest
@@ -71,7 +71,7 @@
                                     <a class="dropdown-item" href="{{route('profile')}}">{{__('Profile')}}</a>
                                     @if (Auth::user()->admin)
                                         <a class="dropdown-item"
-                                           href="{{route('admin.dashboard')}}">{{__('Dashboard')}}</a>
+                                           href="{{route('admin.content')}}">{{__('Dashboard')}}</a>
                                     @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -93,25 +93,25 @@
             </main>
         </div>
         <!-- Site footer -->
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-sm-6 col-xs-12">
-                        <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
-                            <a href="#">WeTuga</a>.
-                        </p>
-                    </div>
+{{--        <footer class="site-footer">--}}
+{{--            <div class="container">--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col-md-8 col-sm-6 col-xs-12">--}}
+{{--                        <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by--}}
+{{--                            <a href="#">WeTuga</a>.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
 
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <ul class="social-icons">
-                            <li><a class="facebook" href="#facebook"><i class="fa fa-facebook-square"></i></a></li>
-                            <li><a class="twitter" href="#twitter"><i class="fa fa-twitter-square"></i></a></li>
-                            <li><a class="linkedin" href="#linkedin"><i class="fa fa-linkedin-square"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
+{{--                    <div class="col-md-4 col-sm-6 col-xs-12">--}}
+{{--                        <ul class="social-icons">--}}
+{{--                            <li><a class="facebook" href="#facebook"><i class="fa fa-facebook-square"></i></a></li>--}}
+{{--                            <li><a class="twitter" href="#twitter"><i class="fa fa-twitter-square"></i></a></li>--}}
+{{--                            <li><a class="linkedin" href="#linkedin"><i class="fa fa-linkedin-square"></i></a></li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </footer>--}}
     </body>
     <!-- Scripts -->
     @yield('scripts')

@@ -15,7 +15,8 @@ class CreateContentTable extends Migration
     {
         Schema::create('content', function (Blueprint $table) {
             $table->bigInteger('id')->autoIncrement()->index();
-            $table->string('name', 64);
+            $table->string('title', 64);
+            $table->string('subtitle', 128);
             $table->date('date');
             $table->string('type', 32);
             $table->integer('season')->nullable();
@@ -26,6 +27,8 @@ class CreateContentTable extends Migration
             $table->string('genre', 256);
             $table->string('studio', 64);
             $table->string('image', 256);
+            $table->string('video', 256);
+            $table->boolean('18rated');
         });
     }
 

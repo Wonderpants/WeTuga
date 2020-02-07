@@ -7,16 +7,27 @@
                 <div class="WTcenter">
                     <div style="text-align: center;">
                         <div id="movies-box" class="WTcontent-box">
-                            <a href="{{ route($page) }}">
-                                <div class="WTbox-header shadow">
-                                    <input type="hidden" id="WTbox-media" value="movies">
-                                    <div class="movies-box-icon"></div>
+                            <div class="WTbox-header shadow">
+                                <input type="hidden" id="WTbox-media" value="movies">
+                                <div class="movies-box-icon"></div>
+                                <a href="{{ route($page) }}">
                                     <div class="WTbox-caption" style="width: initial;">{{ __($page) ?? '' }}</div>
-                                    <input type="hidden" id="boxheaderBtnSlctd" value="">
-                                    <a name="filmes"></a>
-                                    <div class="movies-box-separator"></div>
-                                </div>
-                            </a>
+                                </a>
+                                @guest
+                                @else
+                                    <div class="WTbox-search">
+                                        <form action="{{route('movie.search')}}" accept-charset="UTF-8" method="post"
+                                              id="movies-searchForm">
+                                            @csrf
+                                            @method('POST')
+                                            <label for="searchBox">
+                                                <input type="text" autocomplete="false" name="searchBox" id="searchBox"
+                                                       placeholder="Procure aqui por {{__($page)}}">
+                                            </label>
+                                        </form>
+                                    </div>
+                                @endif
+                            </div>
                             <div id="movies-box-content" class="WTbox-content" style="padding:15px">
                                 <div class="WTbox-media">
                                     <div class="WTlist-content">
@@ -27,17 +38,19 @@
                                                     @foreach($content as $x)
                                                         <div id="5" class="WTitem">
                                                             <a>
-                                                                <img src="/img/{{$x->image}}" alt="{{$x->name}}"
-                                                                     title="{{$x->name}}" width="128" height="190">
+                                                                <img src="{{Storage::url($x->image)}}"
+                                                                     alt="{{$x->title}}"
+                                                                     title="{{$x->title}}" width="128" height="190">
                                                             </a>
                                                         </div>
                                                     @endforeach
                                                 @else
                                                     @foreach($content as $x)
                                                         <div id="5" class="WTitem">
-                                                            <a href="{{route($page)}}/{{$x->id}}">
-                                                                <img src="/img/{{$x->image}}" alt="{{$x->name}}"
-                                                                     title="{{$x->name}}" width="128" height="190">
+                                                            <a href="{{ URL::route($page,['id'=>$x->id]) }}">
+                                                                <img src="{{Storage::url($x->image)}}"
+                                                                     alt="{{$x->title}}"
+                                                                     title="{{$x->title}}" width="128" height="190">
                                                             </a>
                                                         </div>
                                                     @endforeach
